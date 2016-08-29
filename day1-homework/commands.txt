@@ -1,0 +1,9 @@
+cp SRR072893.fastq.gz ~/qbb2016-answers/day1-homework/
+gunzip SRR072893.fastq.gz
+fastqc /Users/cmdb/qbb2016-answers/day1-homework/SRR072893.fastq
+hisat2 -p 4 -x ~/data/BDGP6/BDGP6 -U ~/qbb2016-answers/day1-homework/SRR072893.fastq -S fly.sam 
+samtools view -bS ~/qbb2016-answers/day1-homework/fly.sam > fly.bam
+samtools sort fly.bam -o fly.sorted.bam 
+samtools index fly.sorted.bam
+stringtie ~/qbb2016-answers/day1-homework/fly.sorted.bam -p 4 -e -G ~/data/BDGP6/BDGP6.Ensembl.85.gtf -o ~/qbb2016-answers/day1-homework/fly.gtf -B
+
