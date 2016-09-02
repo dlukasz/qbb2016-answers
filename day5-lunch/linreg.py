@@ -15,6 +15,7 @@ for i in files:
     chip_mean = df[5]
     model = smf.OLS(chip_mean, fpkm)
     results = model.fit()
+    print i
     print results.summary()
 
      
