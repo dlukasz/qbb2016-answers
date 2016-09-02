@@ -8,6 +8,7 @@ from sklearn import datasets
 import numpy as np
 
 df = pd.read_csv(sys.argv[1], sep="\t")
+#df = pd.read_table(sys.argv[1])
 
 
 df_roi = df["FPKM"] > 0
