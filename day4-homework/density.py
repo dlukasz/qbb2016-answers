@@ -26,6 +26,7 @@ density = gaussian_kde(df_log)
 # density._compute_covariance()
 # plt.plot(xs,density(xs))
 xs = np.linspace(-5, 5, 200)
+#start, stop, resolution(number of points between those two numbers so it adds points along the x axis)
 
 plt.figure()
 plt.plot(xs, density(xs))
