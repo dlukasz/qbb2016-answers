@@ -1,0 +1,43 @@
+All statistics are based on contigs of size >= 500 bp, unless otherwise noted (e.g., "# contigs (>= 0 bp)" and "Total length (>= 0 bp)" include all contigs).
+
+Assembly                     spades2_contigs  Assem_contigs  spades_contigs  Assem_contigs 1
+# contigs (>= 0 bp)          1                16             128             305            
+# contigs (>= 1000 bp)       1                7              4               0              
+# contigs (>= 5000 bp)       1                7              0               0              
+# contigs (>= 10000 bp)      1                4              0               0              
+# contigs (>= 25000 bp)      1                1              0               0              
+# contigs (>= 50000 bp)      1                0              0               0              
+Total length (>= 0 bp)       100000           100309         49818           56973          
+Total length (>= 1000 bp)    100000           99584          5313            0              
+Total length (>= 5000 bp)    100000           99584          0               0              
+Total length (>= 10000 bp)   100000           81134          0               0              
+Total length (>= 25000 bp)   100000           33235          0               0              
+Total length (>= 50000 bp)   100000           0              0               0              
+# contigs                    1                7              20              11             
+Largest contig               100000           33235          1737            998            
+Total length                 100000           99584          15922           7243           
+Reference length             4639675          4639675        4639675         4639675        
+GC (%)                       52.59            52.58          51.21           50.71          
+Reference GC (%)             50.79            50.79          50.79           50.79          
+N50                          100000           19911          718             632            
+N75                          100000           13440          635             542            
+L50                          1                2              8               5              
+L75                          1                4              13              8              
+# misassemblies              0                0              1               0              
+# misassembled contigs       0                0              1               0              
+Misassembled contigs length  0                0              1084            0              
+# local misassemblies        0                0              0               0              
+# unaligned contigs          0 + 0 part       0 + 0 part     0 + 0 part      0 + 0 part     
+Unaligned length             0                0              0               0              
+Genome fraction (%)          2.155            2.145          0.343           0.156          
+Duplication ratio            1.000            1.001          1.000           1.000          
+# N's per 100 kbp            0.00             0.00           0.00            0.00           
+# mismatches per 100 kbp     0.00             0.00           31.40           0.00           
+# indels per 100 kbp         0.00             0.00           0.00            0.00           
+Largest alignment            100000           33235          1737            998            
+Total aligned length         100000           99584          15922           7243           
+NA50                         100000           19911          715             632            
+NGA50                        -                -              -               -              
+NA75                         100000           13440          587             542            
+LA50                         1                2              8               5              
+LA75                         1                4              14              8              

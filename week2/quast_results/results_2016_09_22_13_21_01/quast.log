@@ -1,0 +1,213 @@
+/usr/local/Cellar/quast/4.2/quast.py -R /Users/cmdb/qbb2016-answers/week2/reference.fasta /Users/cmdb/qbb2016-answers/week2/spades2/contigs.fasta /Users/cmdb/qbb2016-answers/week2/velvet2/Assem/contigs.fa /Users/cmdb/qbb2016-answers/week2/spades/contigs.fasta /Users/cmdb/qbb2016-answers/week2/Assem/contigs.fa
+
+Version: 4.2, build 21.07.2016 14:03
+
+System information:
+  OS: Darwin-15.6.0-x86_64-i386-64bit (macosx)
+  Python version: 2.7.12
+  CPUs number: 4
+
+Started: 2016-09-22 13:21:01
+
+Logging to /Users/cmdb/qbb2016-answers/week2/quast_results/results_2016_09_22_13_21_01/quast.log
+NOTICE: Maximum number of threads is set to 1 (use --threads option to set it manually)
+
+Main parameters: 
+  Threads: 1, minimum contig length: 500, ambiguity: one, threshold for extensive misassembly size: 1000
+
+Reference:
+  /Users/cmdb/qbb2016-answers/week2/reference.fasta ==> reference
+
+Contigs:
+  1  /Users/cmdb/qbb2016-answers/week2/spades2/contigs.fasta ==> spades2_contigs
+  2  /Users/cmdb/qbb2016-answers/week2/velvet2/Assem/contigs.fa ==> Assem_contigs
+  3  /Users/cmdb/qbb2016-answers/week2/spades/contigs.fasta ==> spades_contigs
+  4  /Users/cmdb/qbb2016-answers/week2/Assem/contigs.fa ==> Assem_contigs 1
+
+2016-09-22 13:21:03
+Running Basic statistics processor...
+  Reference genome:
+    reference.fasta, Reference length = 4639675, Reference GC % = 50.79
+  Contig files: 
+    1  spades2_contigs
+    2  Assem_contigs
+    3  spades_contigs
+    4  Assem_contigs 1
+  Calculating N50 and L50...
+    1  spades2_contigs, N50 = 100000, L50 = 1, Total length = 100000, GC % = 52.59, # N's per 100 kbp =  0.00
+    2  Assem_contigs, N50 = 19911, L50 = 2, Total length = 99584, GC % = 52.58, # N's per 100 kbp =  0.00
+    3  spades_contigs, N50 = 718, L50 = 8, Total length = 15922, GC % = 51.21, # N's per 100 kbp =  0.00
+    4  Assem_contigs 1, N50 = 632, L50 = 5, Total length = 7243, GC % = 50.71, # N's per 100 kbp =  0.00
+  Drawing Nx plot...
+    saved to /Users/cmdb/qbb2016-answers/week2/quast_results/results_2016_09_22_13_21_01/basic_stats/Nx_plot.pdf
+  Drawing NGx plot...
+    saved to /Users/cmdb/qbb2016-answers/week2/quast_results/results_2016_09_22_13_21_01/basic_stats/NGx_plot.pdf
+  Drawing cumulative plot...
+    saved to /Users/cmdb/qbb2016-answers/week2/quast_results/results_2016_09_22_13_21_01/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot...
+    saved to /Users/cmdb/qbb2016-answers/week2/quast_results/results_2016_09_22_13_21_01/basic_stats/GC_content_plot.pdf
+  Drawing Coverage histogram (bin size: 1x)...
+    saved to /Users/cmdb/qbb2016-answers/week2/quast_results/results_2016_09_22_13_21_01/basic_stats/coverage_histogram.pdf
+  Drawing spades2_contigs coverage histogram (bin size: 1x)...
+    saved to /Users/cmdb/qbb2016-answers/week2/quast_results/results_2016_09_22_13_21_01/basic_stats/spades2_contigs_coverage_histogram.pdf
+  Drawing Assem_contigs coverage histogram (bin size: 12x)...
+    saved to /Users/cmdb/qbb2016-answers/week2/quast_results/results_2016_09_22_13_21_01/basic_stats/Assem_contigs_coverage_histogram.pdf
+  Drawing spades_contigs coverage histogram (bin size: 1x)...
+    saved to /Users/cmdb/qbb2016-answers/week2/quast_results/results_2016_09_22_13_21_01/basic_stats/spades_contigs_coverage_histogram.pdf
+  Drawing Assem_contigs 1 coverage histogram (bin size: 1x)...
+    saved to /Users/cmdb/qbb2016-answers/week2/quast_results/results_2016_09_22_13_21_01/basic_stats/Assem_contigs 1_coverage_histogram.pdf
+Done.
+
+2016-09-22 13:21:06
+Running Contig analyzer...
+  1  spades2_contigs
+  1  Logging to files /Users/cmdb/qbb2016-answers/week2/quast_results/results_2016_09_22_13_21_01/contigs_reports/contigs_report_spades2_contigs.stdout and contigs_report_spades2_contigs.stderr...
+  1  Aligning contigs to the reference
+  1  /usr/local/Cellar/quast/4.2/libs/MUMmer3.23-osx/nucmer -c 65 -l 65 --maxmatch \
+     -p quast_results/results_2016_09_22_13_21_01/contigs_reports/nucmer_output/spades2_contigs \
+     quast_results/results_2016_09_22_13_21_01/quast_corrected_input/reference.fasta \
+     quast_results/results_2016_09_22_13_21_01/quast_corrected_input/spades2_contigs.fasta \
+     >> quast_results/results_2016_09_22_13_21_01/contigs_reports/contigs_report_spades2_contigs.stdout \
+     2>> quast_results/results_2016_09_22_13_21_01/contigs_reports/contigs_report_spades2_contigs.stderr
+  1  /usr/local/Cellar/quast/4.2/libs/MUMmer3.23-osx/delta-filter -i 95.0 -l 0 quast_results/results_2016_09_22_13_21_01/contigs_reports/nucmer_output/spades2_contigs.delta \
+     > quast_results/results_2016_09_22_13_21_01/contigs_reports/nucmer_output/spades2_contigs.fdelta \
+     2> quast_results/results_2016_09_22_13_21_01/contigs_reports/contigs_report_spades2_contigs.stderr
+  1  /usr/local/Cellar/quast/4.2/libs/MUMmer3.23-osx/show-coords quast_results/results_2016_09_22_13_21_01/contigs_reports/nucmer_output/spades2_contigs.delta \
+     > quast_results/results_2016_09_22_13_21_01/contigs_reports/nucmer_output/spades2_contigs.coords_tmp \
+     2> quast_results/results_2016_09_22_13_21_01/contigs_reports/contigs_report_spades2_contigs.stderr
+  1  /usr/local/Cellar/quast/4.2/libs/MUMmer3.23-osx/show-snps -S -T -H quast_results/results_2016_09_22_13_21_01/contigs_reports/nucmer_output/spades2_contigs.delta \
+     < quast_results/results_2016_09_22_13_21_01/contigs_reports/nucmer_output/spades2_contigs.coords.headless \
+     > quast_results/results_2016_09_22_13_21_01/contigs_reports/nucmer_output/spades2_contigs.all_snps \
+     2> quast_results/results_2016_09_22_13_21_01/contigs_reports/contigs_report_spades2_contigs.stderr
+  1  Alignments: quast_results/results_2016_09_22_13_21_01/contigs_reports/alignments_spades2_contigs.tsv
+  1  Analysis is finished.
+
+  2  Assem_contigs
+  2  Logging to files /Users/cmdb/qbb2016-answers/week2/quast_results/results_2016_09_22_13_21_01/contigs_reports/contigs_report_Assem_contigs.stdout and contigs_report_Assem_contigs.stderr...
+  2  Aligning contigs to the reference
+  2  /usr/local/Cellar/quast/4.2/libs/MUMmer3.23-osx/nucmer -c 65 -l 65 --maxmatch \
+     -p quast_results/results_2016_09_22_13_21_01/contigs_reports/nucmer_output/Assem_contigs \
+     quast_results/results_2016_09_22_13_21_01/quast_corrected_input/reference.fasta \
+     quast_results/results_2016_09_22_13_21_01/quast_corrected_input/Assem_contigs.fa \
+     >> quast_results/results_2016_09_22_13_21_01/contigs_reports/contigs_report_Assem_contigs.stdout \
+     2>> quast_results/results_2016_09_22_13_21_01/contigs_reports/contigs_report_Assem_contigs.stderr
+  2  /usr/local/Cellar/quast/4.2/libs/MUMmer3.23-osx/delta-filter -i 95.0 -l 0 quast_results/results_2016_09_22_13_21_01/contigs_reports/nucmer_output/Assem_contigs.delta \
+     > quast_results/results_2016_09_22_13_21_01/contigs_reports/nucmer_output/Assem_contigs.fdelta \
+     2> quast_results/results_2016_09_22_13_21_01/contigs_reports/contigs_report_Assem_contigs.stderr
+  2  /usr/local/Cellar/quast/4.2/libs/MUMmer3.23-osx/show-coords quast_results/results_2016_09_22_13_21_01/contigs_reports/nucmer_output/Assem_contigs.delta \
+     > quast_results/results_2016_09_22_13_21_01/contigs_reports/nucmer_output/Assem_contigs.coords_tmp \
+     2> quast_results/results_2016_09_22_13_21_01/contigs_reports/contigs_report_Assem_contigs.stderr
+  2  /usr/local/Cellar/quast/4.2/libs/MUMmer3.23-osx/show-snps -S -T -H quast_results/results_2016_09_22_13_21_01/contigs_reports/nucmer_output/Assem_contigs.delta \
+     < quast_results/results_2016_09_22_13_21_01/contigs_reports/nucmer_output/Assem_contigs.coords.headless \
+     > quast_results/results_2016_09_22_13_21_01/contigs_reports/nucmer_output/Assem_contigs.all_snps \
+     2> quast_results/results_2016_09_22_13_21_01/contigs_reports/contigs_report_Assem_contigs.stderr
+  2  Alignments: quast_results/results_2016_09_22_13_21_01/contigs_reports/alignments_Assem_contigs.tsv
+  2  Analysis is finished.
+
+  3  spades_contigs
+  3  Logging to files /Users/cmdb/qbb2016-answers/week2/quast_results/results_2016_09_22_13_21_01/contigs_reports/contigs_report_spades_contigs.stdout and contigs_report_spades_contigs.stderr...
+  3  Aligning contigs to the reference
+  3  /usr/local/Cellar/quast/4.2/libs/MUMmer3.23-osx/nucmer -c 65 -l 65 --maxmatch \
+     -p quast_results/results_2016_09_22_13_21_01/contigs_reports/nucmer_output/spades_contigs \
+     quast_results/results_2016_09_22_13_21_01/quast_corrected_input/reference.fasta \
+     quast_results/results_2016_09_22_13_21_01/quast_corrected_input/spades_contigs.fasta \
+     >> quast_results/results_2016_09_22_13_21_01/contigs_reports/contigs_report_spades_contigs.stdout \
+     2>> quast_results/results_2016_09_22_13_21_01/contigs_reports/contigs_report_spades_contigs.stderr
+  3  /usr/local/Cellar/quast/4.2/libs/MUMmer3.23-osx/delta-filter -i 95.0 -l 0 quast_results/results_2016_09_22_13_21_01/contigs_reports/nucmer_output/spades_contigs.delta \
+     > quast_results/results_2016_09_22_13_21_01/contigs_reports/nucmer_output/spades_contigs.fdelta \
+     2> quast_results/results_2016_09_22_13_21_01/contigs_reports/contigs_report_spades_contigs.stderr
+  3  /usr/local/Cellar/quast/4.2/libs/MUMmer3.23-osx/show-coords quast_results/results_2016_09_22_13_21_01/contigs_reports/nucmer_output/spades_contigs.delta \
+     > quast_results/results_2016_09_22_13_21_01/contigs_reports/nucmer_output/spades_contigs.coords_tmp \
+     2> quast_results/results_2016_09_22_13_21_01/contigs_reports/contigs_report_spades_contigs.stderr
+  3  /usr/local/Cellar/quast/4.2/libs/MUMmer3.23-osx/show-snps -S -T -H quast_results/results_2016_09_22_13_21_01/contigs_reports/nucmer_output/spades_contigs.delta \
+     < quast_results/results_2016_09_22_13_21_01/contigs_reports/nucmer_output/spades_contigs.coords.headless \
+     > quast_results/results_2016_09_22_13_21_01/contigs_reports/nucmer_output/spades_contigs.all_snps \
+     2> quast_results/results_2016_09_22_13_21_01/contigs_reports/contigs_report_spades_contigs.stderr
+  3  Alignments: quast_results/results_2016_09_22_13_21_01/contigs_reports/alignments_spades_contigs.tsv
+  3  Analysis is finished.
+
+  4  Assem_contigs_1
+  4  Logging to files /Users/cmdb/qbb2016-answers/week2/quast_results/results_2016_09_22_13_21_01/contigs_reports/contigs_report_Assem_contigs_1.stdout and contigs_report_Assem_contigs_1.stderr...
+  4  Aligning contigs to the reference
+  4  /usr/local/Cellar/quast/4.2/libs/MUMmer3.23-osx/nucmer -c 65 -l 65 --maxmatch \
+     -p quast_results/results_2016_09_22_13_21_01/contigs_reports/nucmer_output/Assem_contigs_1 \
+     quast_results/results_2016_09_22_13_21_01/quast_corrected_input/reference.fasta \
+     quast_results/results_2016_09_22_13_21_01/quast_corrected_input/Assem_contigs_1.fa \
+     >> quast_results/results_2016_09_22_13_21_01/contigs_reports/contigs_report_Assem_contigs_1.stdout \
+     2>> quast_results/results_2016_09_22_13_21_01/contigs_reports/contigs_report_Assem_contigs_1.stderr
+  4  /usr/local/Cellar/quast/4.2/libs/MUMmer3.23-osx/delta-filter -i 95.0 -l 0 quast_results/results_2016_09_22_13_21_01/contigs_reports/nucmer_output/Assem_contigs_1.delta \
+     > quast_results/results_2016_09_22_13_21_01/contigs_reports/nucmer_output/Assem_contigs_1.fdelta \
+     2> quast_results/results_2016_09_22_13_21_01/contigs_reports/contigs_report_Assem_contigs_1.stderr
+  4  /usr/local/Cellar/quast/4.2/libs/MUMmer3.23-osx/show-coords quast_results/results_2016_09_22_13_21_01/contigs_reports/nucmer_output/Assem_contigs_1.delta \
+     > quast_results/results_2016_09_22_13_21_01/contigs_reports/nucmer_output/Assem_contigs_1.coords_tmp \
+     2> quast_results/results_2016_09_22_13_21_01/contigs_reports/contigs_report_Assem_contigs_1.stderr
+  4  /usr/local/Cellar/quast/4.2/libs/MUMmer3.23-osx/show-snps -S -T -H quast_results/results_2016_09_22_13_21_01/contigs_reports/nucmer_output/Assem_contigs_1.delta \
+     < quast_results/results_2016_09_22_13_21_01/contigs_reports/nucmer_output/Assem_contigs_1.coords.headless \
+     > quast_results/results_2016_09_22_13_21_01/contigs_reports/nucmer_output/Assem_contigs_1.all_snps \
+     2> quast_results/results_2016_09_22_13_21_01/contigs_reports/contigs_report_Assem_contigs_1.stderr
+  4  Alignments: quast_results/results_2016_09_22_13_21_01/contigs_reports/alignments_Assem_contigs_1.tsv
+  4  Analysis is finished.
+
+  Creating total report...
+    saved to /Users/cmdb/qbb2016-answers/week2/quast_results/results_2016_09_22_13_21_01/contigs_reports/misassemblies_report.txt, misassemblies_report.tsv, and misassemblies_report.tex
+  Transposed version of total report...
+    saved to /Users/cmdb/qbb2016-answers/week2/quast_results/results_2016_09_22_13_21_01/contigs_reports/transposed_report_misassemblies.txt, transposed_report_misassemblies.tsv, and transposed_report_misassemblies.tex
+  Creating total report...
+    saved to /Users/cmdb/qbb2016-answers/week2/quast_results/results_2016_09_22_13_21_01/contigs_reports/unaligned_report.txt, unaligned_report.tsv, and unaligned_report.tex
+  Drawing misassemblies by types plot...
+    saved to /Users/cmdb/qbb2016-answers/week2/quast_results/results_2016_09_22_13_21_01/contigs_reports/misassemblies_plot.pdf
+Done.
+
+2016-09-22 13:21:29
+Running NA-NGA calculation...
+  1  spades2_contigs, Largest alignment = 100000, NA50 = 100000, LA50 = 1
+  2  Assem_contigs, Largest alignment = 33235, NA50 = 19911, LA50 = 2
+  3  spades_contigs, Largest alignment = 1737, NA50 = 715, LA50 = 8
+  4  Assem_contigs 1, Largest alignment = 998, NA50 = 632, LA50 = 5
+  Drawing cumulative plot...
+    saved to /Users/cmdb/qbb2016-answers/week2/quast_results/results_2016_09_22_13_21_01/aligned_stats/cumulative_plot.pdf
+  Drawing NAx plot...
+    saved to /Users/cmdb/qbb2016-answers/week2/quast_results/results_2016_09_22_13_21_01/aligned_stats/NAx_plot.pdf
+  Drawing NGAx plot...
+    saved to /Users/cmdb/qbb2016-answers/week2/quast_results/results_2016_09_22_13_21_01/aligned_stats/NGAx_plot.pdf
+Done.
+
+2016-09-22 13:21:30
+Running Genome analyzer...
+  NOTICE: No file with genes provided. Use the -G option if you want to specify it.
+  NOTICE: No file with operons provided. Use the -O option if you want to specify it.
+  1  spades2_contigs
+  1  Analysis is finished.
+  2  Assem_contigs
+  2  Analysis is finished.
+  3  spades_contigs
+  3  Analysis is finished.
+  4  Assem_contigs_1
+  4  Analysis is finished.
+  Drawing Genome fraction, % histogram...
+    saved to /Users/cmdb/qbb2016-answers/week2/quast_results/results_2016_09_22_13_21_01/genome_stats/genome_fraction_histogram.pdf
+Done.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding option to enable it.
+
+2016-09-22 13:21:34
+Creating large visual summaries...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 2: Creating Icarus viewers...
+  2 of 2: Creating PDF with all tables and plots...
+Done
+
+2016-09-22 13:21:38
+RESULTS:
+  Text versions of total report are saved to /Users/cmdb/qbb2016-answers/week2/quast_results/results_2016_09_22_13_21_01/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /Users/cmdb/qbb2016-answers/week2/quast_results/results_2016_09_22_13_21_01/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) saved to /Users/cmdb/qbb2016-answers/week2/quast_results/results_2016_09_22_13_21_01/report.html
+  PDF version (tables and plots) is saved to /Users/cmdb/qbb2016-answers/week2/quast_results/results_2016_09_22_13_21_01/report.pdf
+  Icarus (contig browser) is saved to /Users/cmdb/qbb2016-answers/week2/quast_results/results_2016_09_22_13_21_01/icarus.html
+  Log saved to /Users/cmdb/qbb2016-answers/week2/quast_results/results_2016_09_22_13_21_01/quast.log
+
+Finished: 2016-09-22 13:21:38
+Elapsed time: 0:00:37.299599
+NOTICEs: 4; WARNINGs: 0; non-fatal ERRORs: 0
+
+Thank you for using QUAST!

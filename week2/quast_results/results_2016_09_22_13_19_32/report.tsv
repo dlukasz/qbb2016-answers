@@ -1,0 +1,22 @@
+Assembly	spades2_contigs	Assem_contigs	spades_contigs	Assem_contigs 1
+# contigs (>= 0 bp)	1	16	128	305
+# contigs (>= 1000 bp)	1	7	4	0
+# contigs (>= 5000 bp)	1	7	0	0
+# contigs (>= 10000 bp)	1	4	0	0
+# contigs (>= 25000 bp)	1	1	0	0
+# contigs (>= 50000 bp)	1	0	0	0
+Total length (>= 0 bp)	100000	100309	49818	56973
+Total length (>= 1000 bp)	100000	99584	5313	0
+Total length (>= 5000 bp)	100000	99584	0	0
+Total length (>= 10000 bp)	100000	81134	0	0
+Total length (>= 25000 bp)	100000	33235	0	0
+Total length (>= 50000 bp)	100000	0	0	0
+# contigs	1	7	20	11
+Largest contig	100000	33235	1737	998
+Total length	100000	99584	15922	7243
+GC (%)	52.59	52.58	51.21	50.71
+N50	100000	19911	718	632
+N75	100000	13440	635	542
+L50	1	2	8	5
+L75	1	4	13	8
+# N's per 100 kbp	0.00	0.00	0.00	0.00
