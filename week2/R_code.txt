@@ -1,0 +1,11 @@
+velvet = read.table("~/qbb2016-answers/week2/dot.velvet", header=T)
+plot.default(velvet)
+
+spade = read.table("~/qbb2016-answers/week2/dot.spades", header=T)
+plot.default(spade)
+
+velvet = read.table("~/qbb2016-answers/week2/dot.velvet2", header=T)
+plot.default(velvet)
+
+spade = read.table("~/qbb2016-answers/week2/dot.spades2", header=T)
+plot.default(spade)
