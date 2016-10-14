@@ -1,0 +1,18 @@
+PLINK v1.90b3 64-bit (11 Jan 2015)
+3 arguments: --freq --vcf genodata.vcf.gz
+Hostname: bio-cmdb-21.local
+Working directory: /Users/cmdb/qbb2016-answers/week5
+Start time: Fri Oct  7 16:48:45 2016
+
+Random number seed: 1475873325
+4096 MB RAM detected; reserving 2048 MB for main workspace.
+--vcf: plink-temporary.bed + plink-temporary.bim + plink-temporary.fam written.
+11623 variants loaded from .bim file.
+1008 people (0 males, 0 females, 1008 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to plink.nosex .
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 1008 founders and 0 nonfounders present.
+Calculating allele frequencies... done.
+--freq: Allele frequencies (founders only) written to plink.frq .
+
+End time: Fri Oct  7 16:48:45 2016
