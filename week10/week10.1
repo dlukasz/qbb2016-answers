@@ -1,0 +1,78 @@
+#!/usr/bin/env python
+
+from matplotlib import pyplot as plt
+from scipy.cluster.hierarchy import dendrogram, linkage, leaves_list
+import scipy.spatial.distance as dist
+import numpy as np
+import pandas as pd
+import sys
+
+
+#open the file assuming the data above is in a file called 'dataFile'
+inFile = open('hema_data','r')
+#save the column/row headers (conditions/genes) into an array
+colHeaders = inFile.next().strip().split()[1:]
+rowHeaders = []
+dataMatrix = []
+
+for line in inFile:
+	data = line.strip().split('\t')
+	rowHeaders.append(data[0])
+	dataMatrix.append([float(x) for x in data[1:]])
+
+#convert native data array into a numpy array
+dataMatrix = np.array(dataMatrix) 
+#dataMatrix = np.transpose(dataMatrix)
+
+distanceMatrix = dist.pdist(dataMatrix,'euclidean') #use euclidean function
+
+z = linkage(distanceMatrix, method='single', metric='euclidean')
+
+
+
+print z
+
+heatmapOrder = leaves_list(z)
+
+#print heatmapOrder
+#(note that this only works with numpy arrays)
+
+orderedDataMatrix = dataMatrix[heatmapOrder]
+#basically what this mean is to take all columns from dataMatrix that
+#matches the indeces in heatmapOrder array. It will perform this in the same
+#order as the heatmapOrder array, creating a new array in the same order. 
+
+rowHeaders = np.array(rowHeaders)
+orderedRowHeaders = rowHeaders[heatmapOrder]
+#do the same for the row headers 
+
+#output data for visualization in a browser with javascript/d3.js
+matrixOutput = []
+row = 0
+for rowData in orderedDataMatrix:
+	col = 0
+	rowOutput = []
+	for colData in rowData:
+		rowOutput.append([colData, row, col])
+		col += 1
+	matrixOutput.append(rowOutput)
+	row += 1
+
+print 'var maxData = ' + str(np.amax(dataMatrix)) + ";"
+print 'var minData = ' + str(np.amin(dataMatrix)) + ";"
+print 'var data = ' + str(matrixOutput) + ";"
+print 'var cols = ' + str(colHeaders) + ";"
+print 'var rows = ' + str([x for x in orderedRowHeaders]) + ";"
+
+
+plt.figure(figsize=(25, 10))
+plt.title('Hierarchical Clustering Dendrogram')
+plt.xlabel('cell type')
+#plt.yscale('log')
+plt.ylabel('distance')
+dendrogram(
+    z,
+    leaf_rotation=90.,  # rotates the x axis labels
+    leaf_font_size=8.,  # font size for the x axis labels
+)
+plt.show()
